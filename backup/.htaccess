@@ -1,0 +1,34 @@
+#################################################################################################
+
+# Protect this .htaccess file
+
+# <files .htaccess>
+#  order allow,deny
+#  deny from all
+# </files>
+
+#################################################################################################
+
+# Directory browsing disabled
+
+# Options All -Indexes
+
+#################################################################################################
+
+# If your domainname is www.yourdomain.com change the hot-linking prevention at line #30
+# to something like this: RewriteCond %{HTTP_REFERER} !.*yourdomain.com.* [OR]
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+# Prevent downloads, requested without a valid referer
+
+RewriteCond %{REQUEST_URI} \.(zip|php)*
+RewriteCond %{HTTP_REFERER} !.*localhost.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule (.*) http://%{REMOTE_ADDR}/$ [R=301,L]
+
+</IfModule>
+
+#################################################################################################

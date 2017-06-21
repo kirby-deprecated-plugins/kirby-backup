@@ -1,0 +1,87 @@
+button#createBackup i,
+button#creatingBackup i {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button#createBackup,
+button#creatingBackup {
+  display : none;
+  background: #fff;
+  color: #000;
+}
+
+button#creatingBackup {
+  background: #999;
+  border-color: #999;
+  color: #eee;
+  cursor: not-allowed;
+  display: none;
+}
+
+button#createBackup:hover {
+  background: #000;
+  color: #fff;
+}
+
+button#createBackup.btn-show,
+button#creatingBackup.btn-show {
+  display : inline-block;
+}
+
+div#backupStatus ul {
+  margin: 20px 0 25px 20px;
+}
+
+div#backupStatus ul li {
+  margin: 15px 0
+}
+
+div#backupStatus button,
+div#backupList button {
+  border: 0;
+  background: transparent;
+  border-bottom: 2px solid #bbb;
+  cursor: pointer;
+  outline: none;
+}
+
+div#backupStatus button:hover,
+div#backupList button:hover
+ {
+  border-bottom-color: #000;
+}
+
+button#deleteBackup {
+  cursor: pointer;
+}
+
+div#backupStatus span {
+  color: #888;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* list with files */
+
+div#backupList button {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+  visibility: hidden;
+}
+
+div#backupList button.fileList {
+  visibility: visible;
+}
+
+div#backupList ul {
+  border-top: 2px solid #ddd;
+  display: none;
+  margin: 0;
+  padding: 20px 0 0 20px;
+}
+
+#backupList li {
+  padding: 2px 0;
+}
